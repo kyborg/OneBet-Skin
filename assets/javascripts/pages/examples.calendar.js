@@ -42,8 +42,7 @@ Theme Version: 	1.3.0
 				left: 'title',
 				right: 'prev,today,next,basicDay,basicWeek,month'
 			},
-			firstDay: '1',
-			weekNumbers: 'true',
+
 			timeFormat: 'h:mm',
 
 			titleFormat: {
@@ -57,8 +56,8 @@ Theme Version: 	1.3.0
 				next: 'fa fa-caret-right',
 			},
 
-			editable: false,
-			droppable: false, // this allows things to be dropped onto the calendar !!!
+			editable: true,
+			droppable: true, // this allows things to be dropped onto the calendar !!!
 			drop: function(date, allDay) { // this function is called when something is dropped
 				var $externalEvent = $(this);
 				// retrieve the dropped element's stored Event Object
@@ -85,9 +84,8 @@ Theme Version: 	1.3.0
 			},
 			events: [
 				{
-					title: 'Win',
-					start: new Date(y, m, 1),
-					description: 'first description' 
+					title: 'All Day Event',
+					start: new Date(y, m, 1)
 				},
 				{
 					title: 'Long Event',
